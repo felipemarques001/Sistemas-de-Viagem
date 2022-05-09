@@ -1,0 +1,30 @@
+{
+    "123ab": {
+        "veiculo": {
+            "placa": "123ab",
+            "tipo": "Carro",
+            "motorista": {
+                "cpf": 131231312,
+                "nome": "renan",
+                "carteira": "AB"
+            }
+        },
+        "rota": "afogados",
+        "status": true,
+        "data": "01/01/2022"
+    },
+    "567": {
+        "veiculo": {
+            "placa": "567",
+            "tipo": "Carro",
+            "motorista": {
+                "cpf": 2342342,
+                "nome": "Nayron",
+                "carteira": "AB"
+            }
+        },
+        "rota": "recife",
+        "status": false,
+        "data": "09/09/2003"
+    }
+}

@@ -1,0 +1,20 @@
+{
+   "123ab": {
+      "placa": "123ab",
+      "tipo": "Carro",
+      "motorista": {
+         "cpf": 131231312,
+         "nome": "renan",
+         "carteira": "AB"
+      }
+   },
+   "567": {
+      "placa": "567",
+      "tipo": "Carro",
+      "motorista": {
+         "cpf": 2342342,
+         "nome": "Nayron",
+         "carteira": "AB"
+      }
+   }
+}

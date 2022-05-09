@@ -1,0 +1,17 @@
+{
+   "131231312": {
+      "cpf": 131231312,
+      "nome": "renan",
+      "carteira": "AB"
+   },
+   "32123": {
+      "cpf": 456789,
+      "nome": "professor",
+      "carteira": "A"
+   },
+   "2342342": {
+      "cpf": 2342342,
+      "nome": "Nayron",
+      "carteira": "AB"
+   }
+}
