@@ -16,5 +16,14 @@
          "nome": "Nayron",
          "carteira": "AB"
       }
+   },
+   "picapau123": {
+      "placa": "picapau123",
+      "tipo": "Carro",
+      "motorista": {
+         "cpf": 123456789,
+         "nome": "RENAN",
+         "carteira": "AB"
+      }
    }
 }

@@ -9,7 +9,7 @@ def menuRemoverMotorista():
             print('\033[31m[1]\033[m - Remover motorista por CPF')
             print('\033[31m[2]\033[m - Remover todos os motoristas')
             print('\033[31m[3]\033[m - Voltar para o menu motorista')
-            opcao = int(input())
+            opcao = int(input('Digite uma das opções>>>'))
             if opcao == 1:
                 cpf = int(input("Digite o CPF do motorista (sem sinais): "))
                 controller.removerMotoristaPorCpf(cpf, dicionarioMotoristas)
