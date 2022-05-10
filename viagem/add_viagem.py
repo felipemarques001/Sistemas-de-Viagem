@@ -26,7 +26,7 @@ def criarViagem():
 
 def listarVeiculos():
     dicionarioVeiculos = gerarVeiculos()
-    print('\n\033[1;32m-----------LISTA DE VEÍCULOS CADASTRADOS---------\033[m')
+    print('\n\033[1;32m-----------LISTA DE TODOS OS VEÍCULOS CADASTRADOS---------\033[m')
     if len(dicionarioVeiculos) != 0:
         for veiculo in dicionarioVeiculos.values():
             if veiculo['motorista'] != None:

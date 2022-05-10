@@ -14,5 +14,5 @@ def salvarMotoristaAtualizado(cpf, motorista):
     dicionarioMotoristas = controller.gerarDicionarioMotoristas()
     dicionarioMotoristas[str(cpf)] = motorista
     controller.salvarDicionarioJson(dicionarioMotoristas)
-    print('Nome do motorista atualizado com sucesso!')
+    print('\033[1;32mNome do motorista atualizado com sucesso!\033[m')
 

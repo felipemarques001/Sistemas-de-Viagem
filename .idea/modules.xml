@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/pythonProject.iml" filepath="$PROJECT_DIR$/.idea/pythonProject.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/Projeto-Sistemas-de-Viagem.iml" filepath="$PROJECT_DIR$/.idea/Projeto-Sistemas-de-Viagem.iml" />
->>>>>>> 3078c837dd57eb89d7c6f45dd66db1517b541b12
+      <module fileurl="file://$PROJECT_DIR$/.idea/Sistemas-de-Viagem.iml" filepath="$PROJECT_DIR$/.idea/Sistemas-de-Viagem.iml" />
     </modules>
   </component>
 </project>

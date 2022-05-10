@@ -2,6 +2,7 @@ from motorista import menu_motorista
 from veiculos import menu_veiculos
 from viagem import menu_viagem
 
+
 def menuPrincipal():
     while True:
         print('\n\033[1;36m-----------MENU PRINCIPAL---------\033[m')
@@ -20,5 +21,6 @@ def menuPrincipal():
             break
         else:
             print("\033[31mOpção inválida!\033[m")
+
 
 menuPrincipal()

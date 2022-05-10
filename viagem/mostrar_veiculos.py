@@ -7,7 +7,7 @@ def mostrarVeiculosViajando():
     if len(veiculosViajando) != 0:
         for veiculo in veiculosViajando.values():
             print(f'Veículo → placa: {veiculo["placa"]}, tipo: {veiculo["tipo"]}\n'
-                f'Motorista → CPF: {veiculo["motorista"]["cpf"]}, nome: {veiculo["motorista"]["nome"]}, carteira: {veiculo["motorista"]["carteira"]}\n')
+                  f'Motorista → CPF: {veiculo["motorista"]["cpf"]}, nome: {veiculo["motorista"]["nome"]}, carteira: {veiculo["motorista"]["carteira"]}\n')
     else:
         print('\033[1;31mNenhum veículo em viagem!\033[m')
 
@@ -19,6 +19,6 @@ def mostrarVeiculosDisponiveis():
         for veiculo in veiculosDisponiveis.values():
             if veiculo['motorista'] != None:
                 print(f'Veículo → placa: {veiculo["placa"]}, tipo: {veiculo["tipo"]}\n'
-                    f'Motorista → CPF: {veiculo["motorista"]["cpf"]}, nome: {veiculo["motorista"]["nome"]}, carteira: {veiculo["motorista"]["carteira"]}\n')
+                      f'Motorista → CPF: {veiculo["motorista"]["cpf"]}, nome: {veiculo["motorista"]["nome"]}, carteira: {veiculo["motorista"]["carteira"]}\n')
     else:
         print('\033[1;31mNenhum veículo disponível!\033[m')

@@ -25,7 +25,7 @@ def removerMotoristaPorCpf(cpf, dicionarioMotoristas):
     if igual == True:
         del dicionarioMotoristas[str(cpf)]
         salvarDicionarioJson(dicionarioMotoristas)
-        print('Motorista excluído com sucesso!')
+        print('\033[1;32mMotorista excluído com sucesso!\033[m')
     else:
         print('\033[31mNenhum motorista com este CPF encontrado!\033[m')
 
@@ -33,7 +33,7 @@ def removerMotoristaPorCpf(cpf, dicionarioMotoristas):
 def removerTodosOsMotoristas(dicionarioMotoristas):
     dicionarioMotoristas.clear()
     salvarDicionarioJson(dicionarioMotoristas)
-    print('Motoristas excluídos com sucesso!')
+    print('\033[1;32mMotoristas excluídos com sucesso!\033[m')
 
 
 def buscarMotoristaPorCpf(dicionario, cpf):

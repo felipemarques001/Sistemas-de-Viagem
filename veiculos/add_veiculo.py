@@ -32,7 +32,7 @@ def cadastrarPlaca():
             print('\033[1;31mEsta placa já está cadastrada!\033[m')
         else:
             return placa
-            break
+
 
 
 # FUNÇAO QUE CHECA OS VALORES PARA CARRO E MOTO:

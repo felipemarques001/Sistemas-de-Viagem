@@ -37,15 +37,10 @@ def separarVeiculosDisponiveis():
     veiculos = pegarVeiculos()
     viagens = lerDadosJson()
     veiculosDisponiveis = {}
-    contador = 0
     for veiculo in veiculos.values():
+        contador = 0
         for viagem in viagens.values():
-            if viagem['veiculo'] != veiculo:
-                contador += 1
-                if contador == len(viagens):
-                    veiculosDisponiveis[veiculo['placa']] = veiculo
-                    contador = 0
-            if viagem['veiculo'] == veiculo and viagem['status'] == False:
+            if viagem['veiculo'] != veiculo or (viagem['veiculo'] == veiculo and viagem['status'] == False):
                 contador += 1
                 if contador == len(viagens):
                     veiculosDisponiveis[veiculo['placa']] = veiculo
@@ -58,7 +53,7 @@ def finalizarViagem(placa):
     for viagem in dicionarioViagens.values():
         if viagem['veiculo']['placa'] == placa and viagem['status'] == True:
             viagem['status'] = False
-            dicionarioViagens[viagem['id']] == viagem
+            dicionarioViagens[viagem['id']] = viagem
             gravarDados(dicionarioViagens)
             return True
     return False

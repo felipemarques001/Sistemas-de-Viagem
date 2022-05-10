@@ -1,5 +1,6 @@
 from motorista import controller
 
+
 def cadastrarMotorista():
     dicionarioMotoristas = controller.gerarDicionarioMotoristas()
     print('\n\033[1;32m-----------CADASTRAR MOTORISTAS---------\033[m')
@@ -12,7 +13,7 @@ def cadastrarMotorista():
         'carteira': carteira
     }
     controller.salvarDicionarioJson(dicionarioMotoristas)
-    print('Motorista cadastrado com sucesso!')
+    print('\033[1;32mMotorista cadastrado com sucesso!\033[m')
 
     print('Deseja cadastar outro motorista? ')
     print('\033[31m[1]\033[m - Sim')
@@ -33,7 +34,8 @@ def criarCPF():
     return cpf
 
 
-def selecionarCarteira(): #Essa função também será usado quando vamos listar um motorista por o seu tipo de habilitação
+def selecionarCarteira():  # Essa função também será usado quando vamos listar um motorista por o seu tipo de
+    # habilitação
     carteira = ""
     while True:
         print('\033[31m[1]\033[m - Carteira tipo A')
@@ -51,5 +53,5 @@ def selecionarCarteira(): #Essa função também será usado quando vamos listar
             carteira = "AB"
             break
         else:
-            print("Escolha inválida!")
+            print("\033[31mEscolha inválida!\033[m")
     return carteira
