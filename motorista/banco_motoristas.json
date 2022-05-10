@@ -14,9 +14,21 @@
       "nome": "Nayron",
       "carteira": "AB"
    },
+<<<<<<< HEAD
    "98768": {
       "cpf": 98768,
       "nome": "Vanessa",
       "carteira": "B"
+=======
+   "123456789": {
+      "cpf": 123456789,
+      "nome": "RENAN",
+      "carteira": "AB"
+   },
+   "1234": {
+      "cpf": 1234,
+      "nome": "ze jacare",
+      "carteira": "A"
+>>>>>>> 3078c837dd57eb89d7c6f45dd66db1517b541b12
    }
 }

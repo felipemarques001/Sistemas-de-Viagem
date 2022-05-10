@@ -17,6 +17,7 @@
          "carteira": "AB"
       }
    },
+<<<<<<< HEAD
    "321ba": {
       "placa": "321ba",
       "tipo": "Carro",
@@ -31,5 +32,15 @@
       "placa": "89889",
       "tipo": "Moto",
       "motorista": null
+=======
+   "picapau123": {
+      "placa": "picapau123",
+      "tipo": "Carro",
+      "motorista": {
+         "cpf": 123456789,
+         "nome": "RENAN",
+         "carteira": "AB"
+      }
+>>>>>>> 3078c837dd57eb89d7c6f45dd66db1517b541b12
    }
 }

@@ -17,7 +17,11 @@ def menuMotorista():
         print('\033[31m[6]\033[m - Listar todos os motorista')
         print('\033[31m[7]\033[m - Sair do menu motorista')
         print()
+<<<<<<< HEAD
         escolha = int(input("DIGITE UMA DAS OPÇÕES>>> "))
+=======
+        escolha = int(input("Digite uma das opções>>>"))
+>>>>>>> 3078c837dd57eb89d7c6f45dd66db1517b541b12
 
         if escolha == 1:
             motorista.cadastrar_motorista.cadastrarMotorista()
