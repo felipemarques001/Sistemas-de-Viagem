@@ -42,19 +42,23 @@ def separarVeiculosDisponiveis():
         for viagem in viagens.values():
             if viagem['veiculo'] != veiculo:
                 contador += 1
-                if contador == len(veiculos):
+                if contador == len(viagens):
                     veiculosDisponiveis[veiculo['placa']] = veiculo
+                    contador = 0
             if viagem['veiculo'] == veiculo and viagem['status'] == False:
-                veiculosDisponiveis[veiculo['placa']] = veiculo
+                contador += 1
+                if contador == len(viagens):
+                    veiculosDisponiveis[veiculo['placa']] = veiculo
+                    contador = 0
     return veiculosDisponiveis
 
 
 def finalizarViagem(placa):
     dicionarioViagens = lerDadosJson()
     for viagem in dicionarioViagens.values():
-        if viagem['veiculo']['placa'] == placa:
+        if viagem['veiculo']['placa'] == placa and viagem['status'] == True:
             viagem['status'] = False
-            dicionarioViagens[placa] == viagem
+            dicionarioViagens[viagem['id']] == viagem
             gravarDados(dicionarioViagens)
             return True
     return False
@@ -65,8 +69,7 @@ def viagensAtivas():
     viagensAtivas = {}
     for viagem in dicionarioViagens.values():
         if viagem['status'] == True:
-            idViagem = viagem['veiculo']['placa']
-            viagensAtivas[idViagem] = viagem
+            viagensAtivas[viagem['id']] = viagem
     return viagensAtivas
 
 
@@ -76,7 +79,5 @@ def viagensEntrePeriodo(data1, data2):
     for viagem in dicionarioViagens.values():
         dataViagem = datetime.strptime(viagem["data"], '%d/%m/%Y').date()
         if dataViagem > data1 and dataViagem < data2:
-            idViagem = viagem['veiculo']['placa']
-            viagensEntrePeriodo[idViagem] = viagem
+            viagensEntrePeriodo[viagem['id']] = viagem
     return viagensEntrePeriodo
-

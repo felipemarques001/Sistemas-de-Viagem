@@ -2,7 +2,7 @@ from veiculos import controller_veiculo
 
 #Usarei esta função quando for remover um motorista do veículo
 def listarVeiculosComMotoristas():
-    print('\033[1;33m-----------LISTAS DE VEÍCULOS COM MOTORISTAS---------\033[m')
+    print('\n\033[1;32m-----------LISTAS DE VEÍCULOS COM MOTORISTAS---------\033[m')
     dicionarioVeiculos = controller_veiculo.lerDadosJson()
     contador = 0
     for veiculo in dicionarioVeiculos.values():
@@ -14,7 +14,7 @@ def listarVeiculosComMotoristas():
     if contador == 0:
         print('\033[1;31mNenhum veículo com motorista cadastrado!\033[m')
 def listarVeiculosSemMotoristas():
-    print('\033[1;33m-----------LISTAS DE VEÍCULOS SEM MOTORISTAS---------\033[m')
+    print('\n\033[1;32m-----------LISTAS DE VEÍCULOS SEM MOTORISTAS---------\033[m')
     dicionarioVeiculos = controller_veiculo.lerDadosJson()
     contador = 0
     for veiculo in dicionarioVeiculos.values():

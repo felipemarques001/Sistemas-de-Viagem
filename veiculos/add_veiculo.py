@@ -2,7 +2,7 @@ from veiculos import controller_veiculo as controller
 
 
 def cadastrarveiculo():
-    print('\033[1;36m-----------CADASTRAR VEÍCULO---------\033[m')
+    print('\n\033[1;32m-----------CADASTRAR VEÍCULO---------\033[m')
     placa = cadastrarPlaca()
     tipo = cadastrarTipo()
     motorista = None
@@ -14,7 +14,6 @@ def cadastrarveiculo():
     }
     controller.gravarDados(dicionarioVeiculos)
     print('\033[1;32mVeículo cadastrado com sucesso!\033[m')
-    print('\033[1;36m---\033[m' * 15)
 
     print('Deseja cadastar outro veículo? ')
     print('\033[31m[1]\033[m - Sim')

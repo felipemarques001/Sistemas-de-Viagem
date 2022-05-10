@@ -3,7 +3,7 @@ from motorista import controller
 
 def menuRemoverMotorista():
     dicionarioMotoristas = controller.gerarDicionarioMotoristas()
-    print('\033[1;36m-----------APAGAR MOTORISTAS---------\033[m')
+    print('\n\033[1;32m-----------APAGAR MOTORISTAS---------\033[m')
     if len(dicionarioMotoristas) != 0:
         while True:
             print('\033[31m[1]\033[m - Remover motorista por CPF')

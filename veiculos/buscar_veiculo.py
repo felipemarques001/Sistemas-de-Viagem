@@ -1,13 +1,13 @@
 from veiculos import controller_veiculo as controller
 
 def buscarVeiculo():
-    print('\033[1;36m-----------BUSCAR VEÍCULO PELA PLACA---------\033[m')
+    print('\n\033[1;32m-----------BUSCAR VEÍCULO PELA PLACA---------\033[m')
     dicionarioVeiculos = controller.lerDadosJson()
     if len(dicionarioVeiculos) != 0:
         placa = input("Digite a placa do veículo: ")
         veiculoEncontrado = controller.buscarVeiculo(dicionarioVeiculos, placa)
         if len(veiculoEncontrado) != 0:
-            print('\033[32m-----------DADOS DO VEÍCULO---------\033[m')
+            print('\033[33m-----------DADOS DO VEÍCULO---------\033[m')
             print(f'Placa: {veiculoEncontrado.get("placa")}\n'
                   f'Tipo de veículo: {veiculoEncontrado.get("tipo")}')
             if veiculoEncontrado['motorista'] != None:

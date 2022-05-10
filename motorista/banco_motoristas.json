@@ -13,5 +13,10 @@
       "cpf": 2342342,
       "nome": "Nayron",
       "carteira": "AB"
+   },
+   "98768": {
+      "cpf": 98768,
+      "nome": "Vanessa",
+      "carteira": "B"
    }
 }

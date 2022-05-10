@@ -16,5 +16,20 @@
          "nome": "Nayron",
          "carteira": "AB"
       }
+   },
+   "321ba": {
+      "placa": "321ba",
+      "tipo": "Carro",
+      "motorista": null
+   },
+   "987783": {
+      "placa": "987783",
+      "tipo": "Carro",
+      "motorista": null
+   },
+   "89889": {
+      "placa": "89889",
+      "tipo": "Moto",
+      "motorista": null
    }
 }

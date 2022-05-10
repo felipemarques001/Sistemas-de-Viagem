@@ -14,7 +14,7 @@ def menuViagem():
         print('\033[1;31m[5]\033[m - Listar veiculos que estão disponíveis para Viagem')
         print('\033[1;31m[6]\033[m - Listar todas as viagens')
         print('\033[1;31m[7]\033[m - Listar todas as viagens por período')
-        print('\033[1;31m[8]\033[m - Sair')
+        print('\033[1;31m[8]\033[m - Sair do menu viagem')
         print('-' * 35)
         escolha = int(input("DIGITE UMA DAS OPÇÕES>>> "))
         if escolha == 1:
@@ -34,4 +34,4 @@ def menuViagem():
         elif escolha == 8:
             break
         else:
-            print("Opção inválida!")
+            print("\033[31mOpção inválida!\033[m")

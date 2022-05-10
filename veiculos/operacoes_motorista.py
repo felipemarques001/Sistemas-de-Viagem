@@ -11,17 +11,18 @@ def listarMotoristas():
     if len(dicionarioVeiculos) != 0:
         if veiculo['motorista'] == None:
             #Listar motoristas capazes de conduzir o veículo
-            print('\n\033[1;36m-----------LISTA DE MOTORISTAS CAPAZES DE CONDUZIR ESTE VEÍCULO---------\033[m')
+            print('\n\033[1;33m-----------LISTA DE MOTORISTAS CAPAZES DE CONDUZIR ESTE VEÍCULO---------\033[m')
             if veiculo.get('tipo') == 'Carro':
                 for motorista in dicionarioMotoristas.values():
                     if motorista.get('carteira') == 'B' or motorista.get('carteira') == 'AB':
                         print(f'CPF: {motorista["cpf"]}, Nome: {motorista["nome"]}, Habilitação: {motorista["carteira"]}')
                         dicionarioMotoristasCapazes[str(motorista.get('cpf'))] = motorista
 
-            else:
+            else: #Se não for carro é moto
                 for motorista in dicionarioMotoristas.values():
-                    print(motorista)
-                    dicionarioMotoristasCapazes[str(motorista.get('cpf'))] = motorista
+                    if motorista.get('carteira') == 'A' or motorista.get('carteira') == 'AB':
+                        print(f'CPF: {motorista["cpf"]}, Nome: {motorista["nome"]}, Habilitação: {motorista["carteira"]}')
+                        dicionarioMotoristasCapazes[str(motorista.get('cpf'))] = motorista
 
             resposta = adicionarMotorista(veiculo, dicionarioMotoristasCapazes)
             if resposta == True:
@@ -46,7 +47,7 @@ def adicionarMotorista(veiculo, motoristas):
 
 
 def removerMotorista():
-    print('\033[1;36m-----------REMOVER MOTORISTA DO VEÍCULO---------\033[m')
+    print('\n\033[1;32m-----------REMOVER MOTORISTA DO VEÍCULO---------\033[m')
     dicionarioVeiculos = controller_veiculo.lerDadosJson()
     if len(dicionarioVeiculos) != 0:
         placa = input("Digite a placa do veículo: ")
@@ -56,7 +57,7 @@ def removerMotorista():
                 veiculoEncontrado['motorista'] = None
                 dicionarioVeiculos[veiculoEncontrado.get('placa')] = veiculoEncontrado
                 controller_veiculo.gravarDados(dicionarioVeiculos)
-                print('Motorista removido com sucesso!')
+                print('\033[1;32mMotorista removido com sucesso!\033[m')
             else:
                 print('\033[1;31mEste veículo não possuí motorista!\033[m')
         else:

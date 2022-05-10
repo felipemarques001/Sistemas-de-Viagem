@@ -2,7 +2,7 @@ from motorista import controller, cadastrar_motorista
 
 
 def listarTodosMotoristas():
-    print('\033[32m-----------LISTA DE MOTORISTAS---------\033[m')
+    print('\n\033[1;32m-----------LISTA DE MOTORISTAS---------\033[m')
     dicionarioMotoristas = controller.gerarDicionarioMotoristas()
     if len(dicionarioMotoristas) != 0:
         for motorista in dicionarioMotoristas.values():
@@ -15,13 +15,13 @@ def listarTodosMotoristas():
 
 
 def listarMotoristaPorCarteira():
-    print('\033[1;36m-----------LISTAR MOTORISTAS POR TIPO DE CARTEIRA---------\033[m')
+    print('\n\033[1;32m-----------LISTAR MOTORISTAS POR TIPO DE CARTEIRA---------\033[m')
     dicionarioMotoristas = controller.gerarDicionarioMotoristas()
     if len(dicionarioMotoristas) != 0:
         print('Selecione o tipo da habilitação')
         carteira = cadastrar_motorista.selecionarCarteira()
         contador = 0
-        print(f'\033[1;36m-----------LISTA DE MOTORISTAS COM CARTEIRA {carteira}---------\033[m')
+        print(f'\033[1;33m-----------LISTA DE MOTORISTAS COM CARTEIRA {carteira}---------\033[m')
         for motorista in dicionarioMotoristas.values():
             if motorista['carteira'] == carteira:
                 print(f'CPF: {motorista.get("cpf")}\n'

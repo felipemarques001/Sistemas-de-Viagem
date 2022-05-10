@@ -2,7 +2,7 @@ from motorista import controller
 
 def cadastrarMotorista():
     dicionarioMotoristas = controller.gerarDicionarioMotoristas()
-    print('\033[1;36m-----------CADASTRAR MOTORISTAS---------\033[m')
+    print('\n\033[1;32m-----------CADASTRAR MOTORISTAS---------\033[m')
     cpf = criarCPF()
     nome = input("Digite o nome do motorista: ")
     carteira = selecionarCarteira()
@@ -29,7 +29,7 @@ def criarCPF():
         if igual == False:
             break
         else:
-            print('CPF já cadastrado!')
+            print('\033[1;31mCPF já cadastrado!\033[m')
     return cpf
 
 
@@ -39,7 +39,7 @@ def selecionarCarteira(): #Essa função também será usado quando vamos listar
         print('\033[31m[1]\033[m - Carteira tipo A')
         print('\033[31m[2]\033[m - Carteira tipo B')
         print('\033[31m[3]\033[m - Carteira tipo AB')
-        escolhaCarteira = int(input())
+        escolhaCarteira = int(input("DIGITE UMA DAS OPÇÕES>>> "))
 
         if escolhaCarteira == 1:
             carteira = "A"

@@ -11,8 +11,10 @@ def criarViagem():
     rota = input("Digite o local de destino da viagem: ").lower()
     status = True
     data = criarData()
-    idViagem = veiculo['placa']
+    numViagem = len(dicionarioViagem)
+    idViagem = veiculo['placa'] + str(numViagem + 1)
     dicionarioViagem[idViagem] = {
+        "id": idViagem,
         "veiculo": veiculo,
         "rota": rota,
         "status": status,
@@ -20,7 +22,6 @@ def criarViagem():
     }
     controller_viagem.gravarDados(dicionarioViagem)
     print('\033[1;32mViagem cadastrada com sucesso!\033[m')
-    print('---' * 15)
 
 
 def listarVeiculos():
@@ -37,7 +38,7 @@ def listarVeiculos():
                       f'Tipo de veículo: {veiculo["tipo"]}; \n'
                       f'Motorista: {veiculo["motorista"]}\n')
     else:
-        print('Nenhum veículo cadastrado!')
+        print('\033[1;31mNenhum veículo cadastrado!\033[m')
 
 def adicionarVeiculo():
     veiculos = gerarVeiculos()

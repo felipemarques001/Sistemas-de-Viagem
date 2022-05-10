@@ -14,8 +14,8 @@ def menuVeiculo():
         print('\033[1;31m[4]\033[m - Remover motorista do veiculo')
         print('\033[1;31m[5]\033[m - Listar veiculos com motoristas')
         print('\033[1;31m[6]\033[m - Listar veiculos sem motoristas')
-        print('\033[1;31m[7]\033[m - Remover Veiculo')
-        print('\033[1;31m[8]\033[m - Sair')
+        print('\033[1;31m[7]\033[m - Remover veiculo')
+        print('\033[1;31m[8]\033[m - Sair do menu veículo')
         print('-'*35)
         escolha = int(input("DIGITE UMA DAS OPÇÕES>>> "))
         if escolha == 1:
@@ -35,4 +35,4 @@ def menuVeiculo():
         elif escolha == 8:
             break
         else:
-            print("Opção inválida!")
+            print("\033[31mOpção inválida!\033[m")

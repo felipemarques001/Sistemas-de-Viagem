@@ -19,6 +19,6 @@ def menuPrincipal():
         elif escolha == 4:
             break
         else:
-            print("Opção inválida!")
+            print("\033[31mOpção inválida!\033[m")
 
 menuPrincipal()

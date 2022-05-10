@@ -2,7 +2,7 @@ from motorista import buscar_motorista
 from motorista import controller
 
 def editarNomeMotorista():
-    print('\033[1;33m↓ ↓ ↓ ↓ ↓ ↓ ↓ EDITAR MOTORISTA ↓ ↓ ↓ ↓ ↓ ↓ ↓\033[m')
+    print('\n\033[1;33m↓ ↓ ↓ ↓ ↓ ↓ ↓ EDITAR MOTORISTA ↓ ↓ ↓ ↓ ↓ ↓ ↓\033[m')
     motorista = buscar_motorista.buscarMotorista() or {}
     if len(motorista) != 0:
         novoNome = input("Digite o novo nome do motorista: ")

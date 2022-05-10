@@ -1,6 +1,7 @@
 from viagem import controller_viagem
 import datetime
 
+
 def listarTodasViagens():
     print('\033[1;32m\n-----------LISTA DE VIAGENS---------\033[m')
     dicionarioViagens = controller_viagem.lerDadosJson()
@@ -8,11 +9,13 @@ def listarTodasViagens():
         for viagem in dicionarioViagens.values():
             print(f'Veículo → placa: {viagem["veiculo"]["placa"]}, tipo: {viagem["veiculo"]["tipo"]}\n'
                   f'Motorista → CPF: {viagem["veiculo"]["motorista"]["cpf"]}, nome: {viagem["veiculo"]["motorista"]["nome"]}, carteira: {viagem["veiculo"]["motorista"]["carteira"]}\n'
+                  f'ID viagem → {viagem["id"]}\n'
                   f'Rota → {viagem["rota"]}\n'
                   f'Status → {viagem["status"]}\n'
                   f'Data → {viagem["data"]}\n')
     else:
         print('\033[1;31mNenhuma viagem cadastrada!\033[m')
+
 
 def listarViagensAtivas():
     print('\033[1;32m\n-----------LISTA DE VIAGENS ATIVAS---------\033[m')
@@ -21,6 +24,7 @@ def listarViagensAtivas():
         for viagem in viagensAtivas.values():
             print(f'Veículo → placa: {viagem["veiculo"]["placa"]}, tipo: {viagem["veiculo"]["tipo"]}\n'
                   f'Motorista → CPF: {viagem["veiculo"]["motorista"]["cpf"]}, nome: {viagem["veiculo"]["motorista"]["nome"]}, carteira: {viagem["veiculo"]["motorista"]["carteira"]}\n'
+                  f'ID viagem → {viagem["id"]}\n'
                   f'Rota → {viagem["rota"]}\n'
                   f'Status → {viagem["status"]}\n'
                   f'Data → {viagem["data"]}\n')
@@ -29,9 +33,9 @@ def listarViagensAtivas():
 
 
 def listarViagemPorPeriodo():
-    if len(controller_viagem.viagensAtivas()) != 0:
+    if len(controller_viagem.lerDadosJson()) != 0:
         print('\033[1;32m\n-----------LISTA DE VIAGENS EM UM PERÍODO---------\033[m')
-        print('\n--------Digite a primeira data--------')
+        print('--------Digite a primeira data--------')
         data1 = criarData()
         print('\n--------Digite a segunda data--------')
         data2 = criarData()
@@ -41,6 +45,7 @@ def listarViagemPorPeriodo():
             for viagem in viagens.values():
                 print(f'Veículo → placa: {viagem["veiculo"]["placa"]}, tipo: {viagem["veiculo"]["tipo"]}\n'
                       f'Motorista → CPF: {viagem["veiculo"]["motorista"]["cpf"]}, nome: {viagem["veiculo"]["motorista"]["nome"]}, carteira: {viagem["veiculo"]["motorista"]["carteira"]}\n'
+                      f'ID viagem → {viagem["id"]}\n'
                       f'Rota → {viagem["rota"]}\n'
                       f'Status → {viagem["status"]}\n'
                       f'Data → {viagem["data"]}\n')
@@ -50,8 +55,8 @@ def listarViagemPorPeriodo():
         print('\033[1;31mNenhuma viagem cadastrada!\033[m')
 
 def criarData():
-    dia = int(input('Digite o dia da viagem: '))
-    mes = int(input('Digite o mês da viagem: '))
-    ano = int(input('Digite o ano da viagem: '))
+    dia = int(input('Digite o dia: '))
+    mes = int(input('Digite o mês: '))
+    ano = int(input('Digite o ano: '))
     data = datetime.date(ano, mes, dia)
     return data

@@ -1,5 +1,6 @@
 from viagem import controller_viagem
 
+
 def mostrarVeiculosViajando():
     print('\033[1;32m\n-----------VEÍCULOS VIAJANDO---------\033[m')
     veiculosViajando = controller_viagem.separarVeiculosViajando()
@@ -8,7 +9,8 @@ def mostrarVeiculosViajando():
             print(f'Veículo → placa: {veiculo["placa"]}, tipo: {veiculo["tipo"]}\n'
                 f'Motorista → CPF: {veiculo["motorista"]["cpf"]}, nome: {veiculo["motorista"]["nome"]}, carteira: {veiculo["motorista"]["carteira"]}\n')
     else:
-        print('\033[1;31mNenhuma veículo em viagem!\033[m')
+        print('\033[1;31mNenhum veículo em viagem!\033[m')
+
 
 def mostrarVeiculosDisponiveis():
     print('\033[1;32m\n-----------VEÍCULOS DISPONÍVEIS PARA VIAGEM---------\033[m')
@@ -19,4 +21,4 @@ def mostrarVeiculosDisponiveis():
                 print(f'Veículo → placa: {veiculo["placa"]}, tipo: {veiculo["tipo"]}\n'
                     f'Motorista → CPF: {veiculo["motorista"]["cpf"]}, nome: {veiculo["motorista"]["nome"]}, carteira: {veiculo["motorista"]["carteira"]}\n')
     else:
-        print('\033[1;31mNenhuma veículo disponível!\033[m')
+        print('\033[1;31mNenhum veículo disponível!\033[m')

@@ -2,14 +2,14 @@ from motorista import controller
 
 
 def buscarMotorista():  # Esta função também é usada quando vamos editar o motorista
-    print('\033[1;36m-----------BUSCAR MOTORISTA POR CPF---------\033[m')
+    print('\n\033[1;32m-----------BUSCAR MOTORISTA POR CPF---------\033[m')
     dicionarioMotoristas = controller.gerarDicionarioMotoristas();
     if len(dicionarioMotoristas) != 0:
         cpf = int(input("Digite o CPF do motorista: "))
         motoristaEncontrado = controller.buscarMotoristaPorCpf(dicionarioMotoristas, cpf)
 
         if len(motoristaEncontrado) != 0:
-            print('\033[32m-----------DADOS DO MOTORISTA---------\033[m')
+            print('\033[1;33m-----------DADOS DO MOTORISTA---------\033[m')
             print(f'CPF: {motoristaEncontrado.get("cpf")}\n'
                   f'Nome: {motoristaEncontrado.get("nome")}\n'
                   f'Tipo de habilitação: {motoristaEncontrado.get("carteira")}')
