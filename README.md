@@ -6,4 +6,4 @@
 * Usamos arquivos JSON para representar os bancos de dados de cada dicionário (motorista, veículo e viagem), cada banco de dados só poderá ser acessado pelo seu respectivo controlador;
 * Veiculo será um dicionário com as chaves: placa, tipo e motorista:
 * Motorista será um dicionário com as chaves: cpf, nome e carteira;
-* Viagem será um dicionário com as chaves: veiculo, rota, status e data;
+* Viagem será um dicionário com as chaves: id, veiculo, rota, status e data;
